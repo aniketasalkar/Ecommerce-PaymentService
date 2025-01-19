@@ -29,3 +29,25 @@ Payment Service for Ecommerce Application
   - `201 Created`: Returns the added payment gateway details.
   - `400 Bad Request`: If the request is invalid.
   - `500 Internal Server Error`: If there is an error during the addition of the payment gateway.
+
+### Authentication Service Client
+
+#### Fetch Service Registry Token
+- **Endpoint:** `/api/auth/service/fetch_token/{serviceName}`
+- **Method:** `GET`
+- **Description:** Fetches the service registry token for a given service name.
+- **Response:**
+  - `200 OK`: Returns the service registry token.
+  - `404 Not Found`: If the service name is not found.
+
+### Order Management Service Client
+
+#### Update Order
+- **Endpoint:** `/api/orders/orders/{id}/update_order`
+- **Method:** `POST`
+- **Description:** Updates an order with the given ID.
+- **Request Body:**
+  - `UpdateOrderDto` (e.g., order status, payment details, etc.)
+- **Response:**
+  - `200 OK`: Returns the updated order details.
+  - `400 Bad Request`: If the request is invalid.
